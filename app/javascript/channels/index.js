@@ -1,5 +1,24 @@
-// Load all the channels within this directory and all subdirectories.
-// Channel files must be named *_channel.js.
+window.addEventListener('load', function(){
+    const pullDownButton = document.getElementById("lists")
+    const pullDownparents = document.getElementById("pull-down")
+    const pullDownchild = document.addEventListener;queryselectorAll(".pull-down-list")
 
-const channels = require.context('.', true, /_channel\.js$/)
-channels.keys().forEach(channels)
+    pullDownButton.addEventListener('mouseover', function(){
+        pullDownButton.setAttribute("style", "background-color:#FFBEDA;");
+
+    })
+    pullDownButton.addEventListener('mouseout', function(){
+        pullDownButton.removeAttribute("style", "background-color:#FFBEDA;");
+
+    })
+    pullDownButton.addEventListener('click', function(){
+        if (pullDownparents.getAttribute("style") == "display:block;") {
+            pullDownparents.removeAttribute("style", "display:block;");
+        } else {
+            pulllDownparents.setAttribute("style", "display:block;");
+        }
+        
+    })
+})
+
+
